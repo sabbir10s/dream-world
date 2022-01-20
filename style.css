@@ -66,6 +66,18 @@ header {
 /* =================
       nav bar 
 ================= */
+#nav-toggler {
+    display: none;
+
+}
+
+.nav-toggler-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -80,7 +92,7 @@ nav {
 
 .navigation li {
     list-style: none;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .navigation li a {
@@ -237,3 +249,67 @@ footer {
     margin-top: 3.2em;
 }
 
+/* ==================
+   Responsive CSS 
+=================== */
+
+@media (max-width:950px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-left h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width:800px) {
+    .nav-toggler-icon {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.767);
+        padding: 20px 0;
+        transform: translateX(-500px);
+        transition: 0.5s ease-in-out;
+    }
+
+    .navigation li a {
+        color: #121212;
+    }
+
+    #nav-toggler:checked~.navigation {
+        transform: translateX(0px);
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .feature,
+    .gallery,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        text-align: center;
+    }
+
+    .photo img {
+        max-width: 350px;
+    }
+
+    .banner-left {
+        order: 2;
+        padding: 3.2em 0;
+    }
+}
