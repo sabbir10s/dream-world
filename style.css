@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ======================
+     common styles 
+ ======================= */
+header {
+    background-image: url(img/cloud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.8em;
+}
+
+.highlight {
+    color: #ff008e;
+}
+
+.primary-button {
+    outline: 0;
+    border: 0;
+    padding: 1em 1.25em;
+    background-image: linear-gradient(90deg, #c5016d, #ff008e);
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 0.31em;
+    cursor: pointer;
+    box-shadow: 0 .4em 0 #a5005b;
+    position: relative;
+    top: 0;
+}
+
+.primary-button:active {
+    top: 5px;
+    box-shadow: 0 .01em 0 #a5005b;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-title h2 {
+    margin: 1.8em 0;
+    font-size: 2.5rem;
+    display: inline-block;
+    border-bottom: 2px solid #ff008e;
+    text-transform: uppercase;
+}
+
+/* =================
+      nav bar 
+================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    list-style: none;
+    margin: 1em;
+}
+
+.navigation li a {
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* =====================
+        banner 
+===================== */
+.banner {
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.banner-left h1 {
+    font-size: 2.8rem;
+    color: white;
+}
+
+.banner-left p {
+    color: white;
+    line-height: 1.5;
+    margin: 1.8em 0;
+}
+
+.banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-right img {
+    width: 100%;
+}
+
+/* ===============
+    Feature card
+=============== */
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8em;
+
+    justify-content: center;
+}
+
+.card {
+    max-width: 18.75em;
+    padding: 1.8em;
+    margin: 0 auto;
+    box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 1.5em;
+    padding: .9em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: #ff008e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: white;
+
+
+}
+
+.card h3 {
+    margin: .5em 0;
+    color: #ff008e;
+
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.card a {
+    text-decoration: none;
+    color: #ff008e;
+}
